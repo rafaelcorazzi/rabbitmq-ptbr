@@ -1,0 +1,38 @@
+#http://www.rabbitmq.com/tutorials/amqp-concepts.html#
+
+* (exchange - achar definição melhor)
+
+AMQP 0-9-1 Modelo Detalhado
+
+Sobre este guia
+
+Este guia promove um visão geral sobre o protocolo AMQP 0-9-1, um dos protocolos 
+suportados pelo rabbitmq.
+
+Detalhamento de alto-nivel do AMQP 0-9-1 e o modelo AMQP
+
+O que é AMQP 0-9-1 ?
+
+AMQP 0-9-1 (Protocolo de Fila de mensagem avançado) é um protocolo de mensagem que habilita
+aplicações cliente se comunicarem com brokers de mensagem intermediários
+
+Brokers e Suas Regras
+
+brokers de mensagem recebem uma mensagem de um distribuidor (aplicações que publicam as mesmas, conhecidos como produtores)
+e transmitem para os seus consumidores (aplicações que processam as mesmas)
+
+Desde que seja um protocolo de rede, os distribuidores, consumidores e os brokers podem estar em máquinas diferentes.
+
+AMQP 0-9-1 em um modelo resumido
+
+O modelo AMQP 0-9-1 tem a seguinte visão de mundo: mensagens que são publicadas para *trocadores ,
+são frequentemente comparados à carteiros ou caixas de correios. *trocadores distribuiem cópias dessas mensagens
+usando regras chamadas de bindings (ligações). Então os brokes AMQP entregam mensagens para consumidores inscritos nessas filas,
+ou consumidores que buscam/leem mensagens das filas por demanda.
+
+http://www.rabbitmq.com/img/tutorials/intro/hello-world-example-routing.png
+
+
+
+
+
