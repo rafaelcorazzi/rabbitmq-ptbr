@@ -32,6 +32,23 @@ ou consumidores que buscam/leem mensagens das filas por demanda.
 
 http://www.rabbitmq.com/img/tutorials/intro/hello-world-example-routing.png
 
+Quando uma mensagem é publicada, o distribuidor poderá especificar atributos a mensagem (meta-dados).
+Alguns desses meta-dados podem ser usados pelo broker, contudo, uma parte disto e obfuscado para o broker e somente usado
+pelo consumidor da mensagem.
+
+Redes não são confiáveis e aplicações podem falhar ao processar a mensagem, assim sendo, o modelo AMQP tem uma notação de mensagens desconhecidas
+(acknowledgements ou ack messages): Quando uma mensagem e entregue ao consumidor o consumidor notifica o broker, automaticamente ou  quando a aplição
+desenvolvida optar por faze-lo. Quando uma mensagem ack está em uso, o broker deverá remover uma mensagem da fila quando receber uma notificação para essa mensagem
+(ou grupo de mensagens)
+
+Em algumas situações, por exemplo, quando uma mensagem não pode ser roteada,as mensagems deverão ser retornadas para o distribuidor, derruba-la, ou , se o broker implementar 
+uma extensão, que deverá colocar a mensagem em uma (dead letter queue). Distribuidores podem escolher como direcionar essas situações publicando mensagens com determiados parametros.
+
+Filas, exchanges e bindings são  conhecidas como uma entidade AMQP.
+
+AMQP é um protocolo programável.
+
+
 
 
 
